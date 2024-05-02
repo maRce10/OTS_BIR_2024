@@ -1,0 +1,68 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  page-footer: Copyright 2024 | <a href="https://marce10.github.io">Marcelo Araya-Salas</a>
+  title: "OTS Bioacoustic Analysis in R 2024"
+  search: true
+  site-url: https://marce10.github.io/OTS_BIR_2024/
+  repo-url: https://github.com/maRce10/OTS_BIR_2024/
+  navbar:
+    right:
+      - icon: github
+        href: https://github.com/maRce10/OTS_BIR_2024/
+        aria-label: GitHub
+    left:
+      - href: index.qmd
+        text: Home
+      - text: "Program"
+        href: program.qmd
+      - text: "Tutorials"
+        menu:
+        - text: "Introduction"
+          href: introduction.qmd
+        - text: "R basics"
+          href: r_basics.qmd
+        - text: "Sound"
+          href: sound.qmd
+        - text: "Spectrograms"
+          href: spectrograms.qmd
+        - text: "seewave"
+          href: seewave.qmd
+        - text: "Annotations"
+          href: annotations.qmd
+        - text: "ohun: automatic detection"
+          href: ohun.qmd
+        - text: "Intro to warbleR"
+          href: intro_to_warbler.qmd 
+        - text: "Measure acoustic structure"
+          href: measure_acoustic_structure.qmd
+        - text: "Comparing measuring methods"
+          href: comparing_methods.qmd        
+        - text: "Quality checks"
+          href: quality_checks.qmd
+        - text: "Measure structure on XC recordings"
+          href: measure_structure_green_hermit.qmd
+      - text: "Colab notebooks"
+        menu: 
+          - text: "General"
+            href: general_redirect.html  
+          - text: "dynaSpec"
+            href: dynaspec_redirect.html
+          - text: "ohun"
+            href: ohun_redirect.html            
+      - text: "Course prep"
+        href: course_prep.qmd
+      - text: "Code sharing"
+        href: code_redirect.html
+      - text: "Instructor"
+        href: instructor.qmd
+
+format:
+  html:
+    theme: simplex
+    css: styles.css
+    toc: true
+    
+editor: visual

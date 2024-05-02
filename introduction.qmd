@@ -1,0 +1,97 @@
+---
+author: "Marcelo Araya-Salas"
+format: 
+  revealjs:
+    self-contained: false
+    incremental: false
+    footer: "Marcelo Araya-Salas | Bioacoustics in R 2024 | OTS"
+    theme: ["custom.scss"]
+    slide-number: c/t
+    show-slide-number: all
+    hash-type: number
+    preview-links: false
+---
+
+# **Why animal sounds?** <br> ... and why R? {background-color="#e0f3a8"}
+
+ 
+
+<center><font size="6">Marcelo Araya-Salas PhD</font></center>
+
+<center><font size="6">*Neuroscience Research Center*</font></center>
+
+<center><font size="6">*University of Costa Rica*</font></center>
+
+ 
+
+ 
+
+<!-- <center><img src="images/ucr_cin.png" width="600px"/></center>  -->
+
+------------------------------------------------------------------------
+
+## **Animal acoustic signals** {.center background-color="black"}
+
+<center>
+
+<iframe width="100%" height="600" src="images/lbh_singing_30fps.mp4" allowtransparency="true" style="background: #000000;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+</center>
+
+------------------------------------------------------------------------
+
+## **Animal acoustic signals**
+
+<center>
+
+<iframe width="100%" height="500" src="images/house-wren.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+</center>
+
+------------------------------------------------------------------------
+
+## **Common research questions**
+
+::: incremental
+-   How animal acoustic signals vary in space and time? why?
+
+-   What is their function?
+
+-   What socio-ecological factors favor the evolution of specific features?
+
+-   How the transmission properties of the environment have shaped signal structure?
+:::
+
+------------------------------------------------------------------------
+
+## **Acoustic analysis workflow**
+
+<center><img src="images/bioacoustic_research_diagram.png" height="100%" width="800px"/></center>
+
+------------------------------------------------------------------------
+
+## **Why bioacoustics in R?**
+
+::: incremental
+-   Improves reproducibility of research
+
+-   Involves a deeper understanding of the structure of our study systems
+
+-   Allows conducting analyses that better fit our research questions and study systems
+
+-   Democratizes access to scientific resources
+:::
+
+------------------------------------------------------------------------
+
+## **Course outline** {background-color="#e0f3a8"}
+
+::: incremental
+-   Tutorials with combinations of theoretical background, demonstrations and proofs of concept using R code and self-learning practices on their own acoustic data or supplied example data
+
+-   Additional practices and readings assigned after each session
+:::
