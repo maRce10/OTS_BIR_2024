@@ -1,18 +1,5 @@
 ---
 date: "`r Sys.Date()`"
-toc: true
-toc-depth: 3
-toc-location: left
-number-sections: true
-highlight-style: pygments
-format:
-  html:
-    df-print: kable
-    code-fold: show
-    code-tools: true
-    css: styles.css
-    link-external-icon: true
-    link-external-newwindow: true      
 ---
 
  
@@ -37,7 +24,7 @@ Example on how to get recording's metadata (no downloading):
 
 library(warbleR)
 
-pl <- query_xc(qword = 'Parus major', download = FALSE)
+pl <- query_xc(qword = 'Phaethornis hispidus', download = FALSE)
 
 ```
 
@@ -61,7 +48,9 @@ Once you feel fine with the subset of data you can go ahead and download it as f
 
 ```{r, eval = FALSE, fig.width=10}
 
-query_xc(X = song_pl, download = TRUE, path = "DIRECTORY WHERE YOU WANT TO SAVE THE FILES")
+query_xc(X = song_pl, 
+         download = TRUE, 
+         path = "DIRECTORY WHERE YOU WANT TO SAVE THE FILES")
 
 ```
 

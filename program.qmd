@@ -1,18 +1,5 @@
 ---
 date: "`r Sys.Date()`"
-toc: true
-toc-depth: 3
-toc-location: left
-number-sections: true
-highlight-style: pygments
-format:
-  html:
-    df-print: kable
-    code-fold: show
-    code-tools: true
-    css: styles.css
-    link-external-icon: true
-    link-external-newwindow: true    
 ---
 
 <font size="4">
@@ -38,7 +25,7 @@ format:
 
  
 
-## Day 1 [(video)](https://youtu.be/Ug-CKhY37Uc)
+## Day 1 
 
 ------------------------------------------------------------------------
 
@@ -109,7 +96,7 @@ format:
 
  
 
-## Day 2 [(video)](https://youtu.be/lmewCO2f0Wo)
+## Day 2 
 
 ------------------------------------------------------------------------
 
@@ -150,7 +137,7 @@ format:
 
  
 
-## Day 3 [(video)](https://youtu.be/He2M6Zqdk80)
+## Day 3 
 
 ------------------------------------------------------------------------
 
@@ -201,16 +188,15 @@ format:
 
  
 
-## Day 4 [(video)](https://youtu.be/zNcltr7v0e4)
+## Day 4 
 
 ------------------------------------------------------------------------
 
 ::: {.alert .alert-warning}
+
 ### Readings
 
-#### 
-
--   Odom, K. J., Cain, K. E., Hall, M. L., Langmore, N. E., Mulder, R. A., Kleindorfer, S., ... & Webster, M. S. (2021). [Sex role similarity and sexual selection predict male and female song elaboration and dimorphism in fairy‐wrens](https://onlinelibrary.wiley.com/doi/pdf/10.1002/ece3.8378). Ecology and evolution, 11(24), 17901-17919.
+- Odom, K. J., Cain, K. E., Hall, M. L., Langmore, N. E., Mulder, R. A., Kleindorfer, S., ... & Webster, M. S. (2021). [Sex role similarity and sexual selection predict male and female song elaboration and dimorphism in fairy‐wrens](https://onlinelibrary.wiley.com/doi/pdf/10.1002/ece3.8378). Ecology and evolution, 11(24), 17901-17919.
 :::
 
  
@@ -241,16 +227,16 @@ format:
 
  
 
-## Day 5 [(video)](https://youtu.be/xFx-0V2HreU)
+## Day 5 
 
 ------------------------------------------------------------------------
 
 ::: {.alert .alert-warning}
 ### Readings
 
--   Blog post: [Potential issues of the 'spectral parameters/PCA' approach](https://marce10.github.io/bioacoustics_in_R/2018/07/04/Issues_spectral_parameters-PCA.html)
+-   Blog post: [Potential issues of the 'spectral parameters/PCA' approach](https://marce10.github.io/coded_bioacoustics/post/2018-07-04-issues_spectral_parameters-pca/)
 
--   Blog post: [Choosing the right method for measuring acoustic signal structure](https://marce10.github.io/bioacoustics_in_R/2017/02/17/Choosing_the_right_method_for_measuring_acoustic_signal_structure.html)
+-   Blog post: [Choosing the right method for measuring acoustic signal structure](https://marce10.github.io/coded_bioacoustics/post/2017-02-17-choosing-the-right-method-for-measuring-acoustic-signal-structure/)
 :::
 
  

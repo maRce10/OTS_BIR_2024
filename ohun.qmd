@@ -1,20 +1,5 @@
 ---
-title: <font size="7"><b><i>ohun</i>&#x3A; optimizing acoustic signal detection</b></font>
-toc: true
-toc-depth: 2
-toc-location: left
-number-sections: true
-highlight-style: pygments
-format:
-  html:
-    df-print: kable
-    code-fold: show
-    code-tools: true
-    css: styles.css
-    link-external-icon: true
-    link-external-newwindow: true  
-editor_options: 
-  chunk_output_type: console
+title: <i>ohun</i>&#x3A; optimizing acoustic signal detection
 ---
 
 ::: {.alert .alert-info}
@@ -58,11 +43,11 @@ To install the latest developmental version from [github](https://github.com/) y
 
 ```{r, eval = FALSE}
 
-# install pacakge
-remotes::install_github("maRce10/ohun")
-
 #load package
 library(ohun)
+library(tuneR)
+library(seewave)
+library(warbleR)
 
 ```
 
@@ -70,6 +55,10 @@ library(ohun)
 
 #load package
 library(ohun)
+library(tuneR)
+library(seewave)
+library(warbleR)
+
 
 data(lbh2)
 data(lbh1)
@@ -500,7 +489,7 @@ label_spectro(wave = simulated_1,  detection = detection)
 ::: {.alert .alert-info}
 <font size="5">Exercise</font>
 
-- Detect only the short sound below 5 kHz
+-   Detect only the short sound below 5 kHz
 
 ```{r, fig.height=4, fig.width=10, eval = FALSE, echo = FALSE}
 
@@ -519,9 +508,7 @@ detection <-
 label_spectro(wave = simulated_1,  detection = detection)
 
 ```
-
 :::
-
 
  
 

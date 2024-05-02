@@ -1,18 +1,5 @@
 ---
-title: <font size="7"><b>Import annotations into R</b></font>
-toc: true
-toc-depth: 2
-toc-location: left
-number-sections: true
-highlight-style: pygments
-format:
-  html:
-    df-print: kable
-    code-fold: show
-    code-tools: true
-    css: styles.css
-    link-external-icon: true
-    link-external-newwindow: true  
+title: Import annotations into R
 ---
 
  
@@ -533,9 +520,19 @@ for(i in 1:6){
   
   wv <- read_wave(X = dat, index = i, from = 0.17, to = 0.4)
 
-  spectro(wv, wl = 250, grid = FALSE, scale = FALSE, axisX = FALSE,
-          axisY = FALSE, ovlp = 90, flim = c(0, 12), 
-          palette = reverse.gray.colors.1)
+  spectro(
+    wv,
+    wl = 250,
+    grid = FALSE,
+    scale = FALSE,
+    axisX = FALSE,
+    axisY = FALSE,
+    ovlp = 90,
+    flim = c(0, 12),
+    palette = viridis::viridis,
+    collevels = seq(-120, 0, 5)
+      
+  )
 }
 
 ```

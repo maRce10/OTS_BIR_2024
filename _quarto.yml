@@ -47,22 +47,35 @@ website:
       - text: "Colab notebooks"
         menu: 
           - text: "General"
-            href: general_redirect.html  
+            href: "https://colab.research.google.com/drive/1KKmndmWB73ZDLfT0eVBArEZX4eVGsVMc?usp=sharing"
           - text: "dynaSpec"
-            href: dynaspec_redirect.html
+            href: "https://colab.research.google.com/drive/1t3Wn9OifcZTvxOMVNmz9dF25vnzU3_Fr?usp=sharing"
           - text: "ohun"
-            href: ohun_redirect.html            
+            href: "https://colab.research.google.com/drive/115nmxxe1pdSqshTW2ABlBNddhVPpCV6F?usp=sharing"       
       - text: "Course prep"
         href: course_prep.qmd
       - text: "Code sharing"
-        href: code_redirect.html
+        href: "https://codefile.io/f/inMsojTFoN"
       - text: "Instructor"
         href: instructor.qmd
 
+toc: true
+toc-depth: 2
+toc-location: left
+toc-title: Contents
+number-sections: true
+code-line-numbers: false
+highlight-style: pygments
+code-overflow: wrap
+code-copy: true
+date: today
+lang: en
 format:
   html:
-    theme: simplex
     css: styles.css
     toc: true
-    
-editor: visual
+    df-print: kable
+    code-fold: show
+    code-tools: false
+    link-external-icon: false
+    link-external-newwindow: true

@@ -1,5 +1,7 @@
 ---
 author: "Marcelo Araya-Salas"
+toc: false
+number-sections: false
 format: 
   revealjs:
     self-contained: false

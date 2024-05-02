@@ -1,18 +1,9 @@
 ---
 date: "`r Sys.Date()`"
-toc: true
-toc-depth: 3
-toc-location: left
-number-sections: true
-highlight-style: pygments
 format:
   html:
-    df-print: kable
-    code-fold: show
-    code-tools: true
-    css: styles.css
-    link-external-icon: true
-    link-external-newwindow: true  
+    toc: false
+    code-fold: false
 ---
 
  
@@ -31,50 +22,61 @@ version$version.string
 
 ```
 
-2)  Install or update the RStudio interface (<https://www.rstudio.com/products/rstudio/download/>, choose the free version). Optional but advised.
+2)  Update all R packages if you already had R installed (`r emo::ji("warning")` this step can take a long time to run `r emo::ji("warning")`):
 
-3)  Make a directory called "BIR_OTS_2024", this will be your working directory for the course.
+```{r}
 
-4)  Open RStudio and select the tab "Tools" then "Global Options" (last option). Select the "Code" option, then select the box for "Soft-wrap R source files".
+update.packages(ask = FALSE)
+```
 
-5)  Also in Rstudio: Select the "Pane Layout" option and move "Source" to the top left pane and "Console" to the top right pane. For those of you unfamiliar with RStudio, the source is your script, where you save code in a physical file (usually .R script) and the console prints the output of the code you run from the source. You can write code in the console, but it will not be saved in a physical file. This layout allocates more screen space to the most useful panes. Hit "Apply" and "Ok".
+3)  Install or update the RStudio interface (<https://www.rstudio.com/products/rstudio/download/>, choose the free version). Optional but advised.
 
-6)  Also in Rstudio: Go back up to the "File" tab and select "New Project", then select the "BIR_OTS_2024" directory.
+4)  Make a directory called "BIR_OTS_2024", this will be your working directory for the course.
 
-7)  Now in the R console in Rstudio: Run the following code to install the latest developmental versions (from github) of warbleR, Rraven, PhenotypeSpace, ohun, baRulho and dynaSpec (remove the packages first if you have them installed already).
+5)  Open RStudio and select the tab "Tools" then "Global Options" (last option). Select the "Code" option, then select the box for "Soft-wrap R source files".
+
+6)  Also in Rstudio: Select the "Pane Layout" option and move "Source" to the top left pane and "Console" to the top right pane. For those of you unfamiliar with RStudio, the source is your script, where you save code in a physical file (usually .R script) and the console prints the output of the code you run from the source. You can write code in the console, but it will not be saved in a physical file. This layout allocates more screen space to the most useful panes. Hit "Apply" and "Ok".
+
+7)  Also in Rstudio: Go back up to the "File" tab and select "New Project", then select the "BIR_OTS_2024" directory.
+
+8)  Now in the R console in Rstudio: Run the following code to install the latest developmental versions (from github) of warbleR, Rraven, PhenotypeSpace, ohun, baRulho and dynaSpec (remove the packages first if you have them installed already).
 
 ```{r}
 
 # package to install other packages from github
-install.packages("remotes") 
+if (!requireNamespace("sketchy"))
+  install.packages("sketchy") 
 
-# install from github
-remotes::install_github("maRce10/warbleR")
-remotes::install_github("maRce10/Rraven")
-remotes::install_github("maRce10/ohun")
-remotes::install_github("spatstat/spatstat.core") 
-remotes::install_github("maRce10/PhenotypeSpace")
-remotes::install_github("maRce10/baRulho")
-remotes::install_github("maRce10/dynaSpec")
+# load package
+library(sketchy)
 
-# install from CRAN
-install.packages("pracma")
-install.packages("Sim.DiffProc")
-install.packages("bioacoustics")
-install.packages("phonTools")
-install.packages("soundgen")
+# install/load packages
+load_packages(packages = c(
+  "pracma",
+  "Sim.DiffProc",
+  "bioacoustics",
+  "phonTools",
+  "soundgen",
+  "audio",
+  github = "maRce10/warbleR",
+  github = "maRce10/Rraven",
+  github = "maRce10/ohun",
+  github = "spatstat/spatstat.core",
+  github = "maRce10/PhenotypeSpace",
+  github = "maRce10/baRulho",
+  github = "maRce10/dynaSpec"
+ )
+)
 
 ```
 
--   if you have any issue installing 'bioacoustics' take a look at this fix: <https://stackoverflow.com/questions/53092646/unable-to-install-warbler-package-using-mac-os>
+*if you have any issue installing 'bioacoustics' take a look at this fix: <https://stackoverflow.com/questions/53092646/unable-to-install-warbler-package-using-mac-os>*
 
-8)  warbleR depends heavily on the R package seewave. Seewave may require some extra steps to get installed. Take a look at seewave's website for further help: [http://rug.mnhn.fr/seewave](http://rug.mnhn.fr/seewave/) (and then go to "installation" and scroll down)
+9)  warbleR depends heavily on the R package seewave. Seewave may require some extra steps to get installed. Take a look at seewave's website for further help: [http://rug.mnhn.fr/seewave](http://rug.mnhn.fr/seewave/) (and then go to "installation" and scroll down)
 
-9)  Install Raven lite (scroll down to "Raven Lite 2.0" and click on "Order Free Raven Lite 2.0 License"):
+10) Install Raven lite from [ttp://ravensoundsoftware.com/raven-pricing/](http://ravensoundsoftware.com/raven-pricing/)(scroll down to "Raven Lite 2.0" and click on "Order Free Raven Lite 2.0 License"
 
-h[ttp://ravensoundsoftware.com/raven-pricing/](http://ravensoundsoftware.com/raven-pricing/)
-
-10) Install ffmpeg (only needed for dynaSpec package, not critical):
+11) Install ffmpeg (only needed for dynaSpec package, not critical):
 
 <https://ffmpeg.org/download.html>
 
@@ -82,22 +84,20 @@ take a look at this link if you have issues installing ffmpeg on windows:
 
 <https://github.com/maRce10/dynaSpec/issues/3>
 
-11) Install Audacity (not critical, you can use Adobe Audition instead):
+12) Install Audacity (not critical, you can use Adobe Audition instead):
 
 <https://www.audacityteam.org/download/>
 
-12) Install SOX. It can be downloaded from here (not critical but could be useful): [http://sox.sourceforge.net](http://sox.sourceforge.net/) (*Not critical*)
+13) Install SOX. It can be downloaded from here (not critical but could be useful): [http://sox.sourceforge.net](http://sox.sourceforge.net/) (*Not critical*)
 
-13) Install FLAC. It can be downloaded from here (also not critical): [https://xiph.org/flac/download.html](http://sox.sourceforge.net/) (*Not critical*)
+14) Install FLAC. It can be downloaded from here (also not critical): [https://xiph.org/flac/download.html](http://sox.sourceforge.net/) (*Not critical*)
 
-14) Note that you can also run the code using google colab. Take a look at this notebook: [https://colab.research.google.com/](https://colab.research.google.com/drive/1KKmndmWB73ZDLfT0eVBArEZX4eVGsVMc?usp=sharing#scrollTo=05bsvm_f7UNt)
+15) Note that you can also run the code using google colab. Take a look at this notebook: [https://colab.research.google.com/](https://colab.research.google.com/drive/1KKmndmWB73ZDLfT0eVBArEZX4eVGsVMc?usp=sharing#scrollTo=05bsvm_f7UNt)
 
  
 
 ::: {.alert .alert-warning}
 **A few tips to make sure you will take full advantage of the course**:
-
- 
 
 -   Set aside a physical space, hopefully as isolated as possible from external stimuli
 -   Use headphones/earphones to avoid any interference from echoes or external noises

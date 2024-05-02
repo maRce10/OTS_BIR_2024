@@ -1,18 +1,5 @@
 ---
-title: <font size="7"><b>Sound</b></font>
-toc: true
-toc-depth: 2
-toc-location: left
-number-sections: true
-highlight-style: pygments
-format:
-  html:
-    df-print: kable
-    code-fold: show
-    code-tools: true
-    css: styles.css
-    link-external-icon: true
-    link-external-newwindow: true  
+title: Sound
 ---
 
  
@@ -47,7 +34,7 @@ Sound waves are characterized by compression and expansion of the medium as soun
 
 The variation in pressure that is perceived at a fixed point in space can be represented by a graph of pressure (amplitude) by time:
 
-![wave and oscillogram](images/amplitude.gif){alt="wave and oscillogram" width="600" height="350"}
+![wave and oscillogram](images/amplitude.gif){width="600" height="350"}
 
  
 
