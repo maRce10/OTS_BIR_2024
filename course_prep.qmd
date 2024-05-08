@@ -61,6 +61,7 @@ load_packages(packages = c(
   github = "maRce10/warbleR",
   github = "maRce10/Rraven",
   github = "maRce10/ohun",
+  github = "maRce10/suwo",
   github = "spatstat/spatstat.core",
   github = "maRce10/PhenotypeSpace",
   github = "maRce10/baRulho",
@@ -74,7 +75,7 @@ load_packages(packages = c(
 
 9)  warbleR depends heavily on the R package seewave. Seewave may require some extra steps to get installed. Take a look at seewave's website for further help: [http://rug.mnhn.fr/seewave](http://rug.mnhn.fr/seewave/) (and then go to "installation" and scroll down)
 
-10) Install Raven lite from [ttp://ravensoundsoftware.com/raven-pricing/](http://ravensoundsoftware.com/raven-pricing/)(scroll down to "Raven Lite 2.0" and click on "Order Free Raven Lite 2.0 License"
+10) Install Raven lite from [ttp://ravensoundsoftware.com/raven-pricing/](http://ravensoundsoftware.com/raven-pricing/)(scroll down to "Raven Lite 2.0" and click on "Order Free Raven Lite 2.0 License"). Ignore if you have any Raven version already installed.
 
 11) Install ffmpeg (only needed for dynaSpec package, not critical):
 
