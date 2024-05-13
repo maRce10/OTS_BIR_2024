@@ -1,5 +1,7 @@
 ---
 title: Sound
+editor_options: 
+  chunk_output_type: console
 ---
 
  
@@ -325,7 +327,10 @@ quant <- as.numeric(cut(sn.wv@left, breaks = intervals)) - (1  + (intervals / 2)
 
 plot(x = seq(0, duration(sn.wv), length.out = length(sn.wv)), y = sn.wv@left, type = "l", yaxt='n', ylim = c(-1 * (intervals ) / 2, (intervals - 1) / 2), lwd = 2, col = col, xlab = "Time (s)", ylab = "Amplitude", xaxs='i', lty = 2)
 
-lines(x = seq(0, duration(sn.wv), length.out = length(sn.wv)), y = quant, type = "l", yaxt='n', ylim = c(-1 * (intervals - 1) / 2, (intervals - 1) / 2), lwd = lwd, col = col, xlab = "Time (s)", ylab = "Amplitude", xaxs='i')
+# lines(x = seq(0, duration(sn.wv), length.out = length(sn.wv)), y = quant, type = "l", yaxt='n', ylim = c(-1 * (intervals - 1) / 2, (intervals - 1) / 2), lwd = lwd, col = col, xlab = "Time (s)", ylab = "Amplitude", xaxs='i')
+
+amps <- quant[seq(0, length(sn.wv), 10)]
+times <- seq(0, duration(sn.wv), length.out = length(sn.wv))[seq(0, length(sn.wv), 10)]
 
 rect(xleft=0, xright= duration(sn.wv)/ 2, ybottom=-intervals, ytop= intervals, col = adjustcolor("gray", alpha.f = 0.3), border = NA)
 
@@ -335,7 +340,15 @@ abline(v = seq(0, duration(sn.wv), length.out = length(sn.wv))[seq(0, length(sn.
 
 abline(h = unique(quant), lwd = 0.5, lty = 2)
 
+for (i in seq_along(amps)){
+lines(y = c(0, amps[i]), x = times[c(i, i)], type = "l", yaxt='n', ylim = c(-1 * (intervals - 1) / 2, (intervals - 1) / 2), lwd = lwd, col = adjustcolor("red", alpha.f = 0.5), xlab = "Time (s)", ylab = "Amplitude", xaxs='i') 
+}
+
+
+
 points(y = quant[seq(0, length(sn.wv), 10)], x = seq(0, duration(sn.wv), length.out = length(sn.wv))[seq(0, length(sn.wv), 10)], col = "orange", pch = 20, cex = 2)
+
+
 
 ```
 

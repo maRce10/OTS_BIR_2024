@@ -30,26 +30,22 @@ date: "`r Sys.Date()`"
 ------------------------------------------------------------------------
 
 ::: {.alert .alert-warning}
-### Readings
+### Aditional materials
 
-#### Intro to basic bioacoustics concepts
+#### Readings
 
+-   Alston, J. M., & Rick, J. A. (2021). [A beginner's guide to conducting reproducible research](http://jessicarick.com/s/Alston_ReproducibleResearch_BulletinESA_Rev1.pdf). Bulletin of the Ecological Society of America, 102(2), 1-14.
+-   Culina, A., van den Berg, I., Evans, S., & Sánchez-Tójar, A. (2020). [Low availability of code in ecology: A call for urgent action](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000763). PLoS Biology, 18(7), e3000763.
 -   Köhler, J., Jansen, M., Rodríguez, A., Kok, P. J. R., Toledo, L. F., Emmrich, M., ... & Vences, M. (2017). [The use of bioacoustics in anuran taxonomy: theory, terminology, methods and recommendations for best practice](http://www.mvences.de/p/p1/Vences_A354.pdf). Zootaxa, 4251(1), 1-124. (*at least the first 28 pages*)
 
-### Videos
+
+#### Videos
 
 -   [Introduction to digital audio](https://www.youtube.com/watch?v=24BnHsY6rQs)
 
 -   Digital audio artifacts: ([Video 1](https://www.youtube.com/watch?v=GwYTtSd8bTU), [Video 2](https://www.youtube.com/watch?v=thw32YvLrYo))
 
- 
 
-### Optional readings
-
-#### Reproducibility
-
--   Alston, J. M., & Rick, J. A. (2021). [A beginner's guide to conducting reproducible research](http://jessicarick.com/s/Alston_ReproducibleResearch_BulletinESA_Rev1.pdf). Bulletin of the Ecological Society of America, 102(2), 1-14.
--   Culina, A., van den Berg, I., Evans, S., & Sánchez-Tójar, A. (2020). [Low availability of code in ecology: A call for urgent action](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000763). PLoS Biology, 18(7), e3000763.
 :::
 
  
@@ -68,7 +64,7 @@ date: "`r Sys.Date()`"
 ::: {.alert .alert-warning}
 -   Create a Rstudio project for the course
 
--   Download [this folder](https://www.dropbox.com/sh/87qx2ckr047dcru/AAAIIJZdoca3T4-3sUYmrB4xa?dl=0) into the course project directory
+-   Download [this folder](https://www.dropbox.com/scl/fo/re805czq8ubco4kwjk1pz/AD0MY-dCXTVRiKeJqOhj9vQ?rlkey=l6v0yygmpagy76glbnwj0vuz5&dl=0) into the course project directory
 :::
 
 -   Sound as a time series
@@ -83,11 +79,11 @@ date: "`r Sys.Date()`"
 ::: {.alert .alert-info}
 ### Homework
 
-1.  Use the function `query_xc()` to check the availability of recordings for any bird species (do not download at this step) ([*check this brief tutorial on how to do that*](get_xc_recordings.qmd))
+1.  Use the function `query_xenocanto()` from the suwo package to check the availability of recordings for any bird species (do not download at this step) ([*check this brief tutorial on how to do that*](get_online_recordings.qmd))
 
 2.  Subset the data frame returned by the function to get a subset of subspecies/populations or recordings from a specific country and for certain vocalization type (using base R subsetting tools)
 
-3.  Download the associated recordings using `query_xc()` again
+3.  Download the associated recordings using `query_xenocanto()` again
 
 4.  Explore the recordings with any spectrogram creating GUI program
 :::

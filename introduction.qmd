@@ -93,7 +93,7 @@ format:
 ## **Course outline** {background-color="#e0f3a8"}
 
 ::: incremental
--   Tutorials with combinations of theoretical background, demonstrations and proofs of concept using R code and self-learning practices on their own acoustic data or supplied example data
-
--   Additional practices and readings assigned after each session
+-   Tutorials with combinations of theoretical background, demonstrations and proofs of concept using R code
+- Self-learning practices on their own acoustic data or supplied example data
+-   Additional practices and readings assigned after each session (optional)
 :::
