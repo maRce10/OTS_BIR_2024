@@ -36,9 +36,9 @@ data(orni)
 
 ```
 
-## Fourier transformation
+## Fourier transform
 
-In order to understand the information contained in a spectrogram it is necessary to understand, at least briefly, the [Fourier transformation](https://en.wikipedia.org/wiki/Fourier_transform). In simple words, this is a mathematical transformation that detects the periodicity in time series, identifying the different frequencies that compose them and their relative energy. Therefore it is said that it transforms the signals from the time domain to the frequency domain.
+In order to understand the information contained in a spectrogram it is necessary to understand, at least briefly, the [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform). In simple words, this is a mathematical transformation that detects the periodicity in time series, identifying the different frequencies that compose them and their relative energy. Therefore it is said that it transforms the signals from the time domain to the frequency domain.
 
 To better understand how it works, we can simulate time series composed of pre-defined frequencies. In this example we simulate 3 frequencies and join them in a single time series:
 
@@ -134,7 +134,7 @@ par(opar)
 
  
 
-## From the Fourier transformation to the spectrogram
+## From the Fourier transform to the spectrogram
 
 The spectrograms are constructed of the spectral decomposition of discrete time segments of amplitude values. Each segment (or window) of time is a column of spectral density values in a frequency range. Take for example this simple modulated sound, which goes up and down in frequency:
 
@@ -356,7 +356,7 @@ plot(seq(0, 99, 1), vnts, type =  "l", col = "red", lwd = 4, ylab = "# of time w
 
  
 
-This increase in spectrogram sharpness does not come without a cost. The longer the time windows, the greater the number of Fourier transformations to compute, and therefore, the greater the duration of the process. This graphic shows the increase in duration as a function of the number of windows on my computer:
+This increase in spectrogram sharpness does not come without a cost. The longer the time windows, the greater the number of Fourier transforms to compute, and therefore, the greater the duration of the process. This graphic shows the increase in duration as a function of the number of windows on my computer:
 
 ```{r, eval = FALSE, echo = FALSE}
 
@@ -403,7 +403,7 @@ saveGIF(for(x in seq(10, 402, 4))
   # time windows 
   tw <- seq(1, 8000, length.out = x)
 
-  # fourier transformation for each time window
+  # fourier transform for each time window
   fspc <- lapply(2:length(tw), function(i) {
     
     # transform and log
