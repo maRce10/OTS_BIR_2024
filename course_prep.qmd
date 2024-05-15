@@ -62,8 +62,6 @@ load_packages(packages = c(
   github = "maRce10/Rraven",
   github = "maRce10/ohun",
   github = "maRce10/suwo",
-  github = "spatstat/spatstat.core",
-  github = "maRce10/PhenotypeSpace",
   github = "maRce10/baRulho",
   github = "maRce10/dynaSpec"
  )
@@ -78,6 +76,15 @@ load_packages(packages = c(
   - [rgeos_0.6-4.tar.gz](https://cran.r-project.org/src/contrib/Archive/rgeos/rgeos_0.6-4.tar.gz)
 
   - [spatstat.core_2.4-4.tar.gz](https://cran.r-project.org/src/contrib/Archive/spatstat.core/spatstat.core_2.4-4.tar.gz)
+
+Once you have install them you can install PhenotypeSpace:
+
+```{r}
+
+# install/load package
+load_packages(packages = c(github = "maRce10/PhenotypeSpace"))
+
+```
 
 
 10) warbleR depends heavily on the R package seewave. Seewave may require some extra steps to get installed. Take a look at seewave's website for further help: [http://rug.mnhn.fr/seewave](http://rug.mnhn.fr/seewave/) (and then go to "installation" and scroll down)

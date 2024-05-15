@@ -307,12 +307,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">github =</span> <span class="st">"maRce10/Rraven"</span>,</span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">github =</span> <span class="st">"maRce10/ohun"</span>,</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">github =</span> <span class="st">"maRce10/suwo"</span>,</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">github =</span> <span class="st">"spatstat/spatstat.core"</span>,</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">github =</span> <span class="st">"maRce10/PhenotypeSpace"</span>,</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">github =</span> <span class="st">"maRce10/baRulho"</span>,</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">github =</span> <span class="st">"maRce10/dynaSpec"</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a> )</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">github =</span> <span class="st">"maRce10/baRulho"</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">github =</span> <span class="st">"maRce10/dynaSpec"</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a> )</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><em>if you have any issue installing ‘bioacoustics’ take a look at this fix: <a href="https://stackoverflow.com/questions/53092646/unable-to-install-warbler-package-using-mac-os" class="uri">https://stackoverflow.com/questions/53092646/unable-to-install-warbler-package-using-mac-os</a></em></p>
 <ol start="9" type="1">
@@ -322,6 +320,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><a href="https://cran.r-project.org/src/contrib/Archive/rgeos/rgeos_0.6-4.tar.gz">rgeos_0.6-4.tar.gz</a></p></li>
 <li><p><a href="https://cran.r-project.org/src/contrib/Archive/spatstat.core/spatstat.core_2.4-4.tar.gz">spatstat.core_2.4-4.tar.gz</a></p></li>
 </ul>
+<p>Once you have install them you can install PhenotypeSpace:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install/load package</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load_packages</span>(<span class="at">packages =</span> <span class="fu">c</span>(<span class="at">github =</span> <span class="st">"maRce10/PhenotypeSpace"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ol start="10" type="1">
 <li><p>warbleR depends heavily on the R package seewave. Seewave may require some extra steps to get installed. Take a look at seewave’s website for further help: <a href="http://rug.mnhn.fr/seewave/">http://rug.mnhn.fr/seewave</a> (and then go to “installation” and scroll down)</p></li>
 <li><p>Install Raven lite from <a href="http://ravensoundsoftware.com/raven-pricing/">ttp://ravensoundsoftware.com/raven-pricing/</a>(scroll down to “Raven Lite 2.0” and click on “Order Free Raven Lite 2.0 License”). Ignore if you have any Raven version already installed.</p></li>
