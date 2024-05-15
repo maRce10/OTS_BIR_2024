@@ -270,11 +270,11 @@ to warbleR</a>
 -   Selection table manipulation
 -   warbleR functions and the bioacoustics analysis workflow
 
-- Gibb, R., Browning, E., Glover‐Kapfer, P., & Jones, K. E. (2019). [Emerging opportunities and challenges for passive acoustics in ecological assessment and monitoring](https://besjournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/2041-210X.13101). Methods in Ecology and Evolution, 10(2), 169-185.´
+- Gibb, R., Browning, E., Glover‐Kapfer, P., & Jones, K. E. (2019). [Emerging opportunities and challenges for passive acoustics in ecological assessment and monitoring](https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210x.13101). Methods in Ecology and Evolution, 10(2), 169-185.´
 
 #### Signal transmission
 
 - Graham, B. A., Sandoval, L., Dabelsteen, T., & Mennill, D. J. (2017). [A test of the Acoustic Adaptation Hypothesis in three types of tropical forest: degradation of male and female Rufous-and-white Wren songs](https://www.tandfonline.com/doi/pdf/10.1080/09524622.2016.1181574?casa_token=AzHx1ABmGXUAAAAA:f33oQnqbUrBR2q6om8FmkKjRNOxN_WDQqIa1Szly_rdUlvV4pLffuFXZtWyj6T6FQyV5NhVqIdwOITZqKw). Bioacoustics, 26(1), 37-61.
 
-- Dabelsteen, T., Larsen, O. N., & Pedersen, S. B. (1993). [Habitat‐induced degradation of sound signals: Quantifying the effects of communication sounds and bird location on blur ratio, excess attenuation, and signal‐to‐noise ratio in blackbird song](https://www.academia.edu/download/72224403/eed203af725673bae94999ae0258049db24c.pdf). The Journal of the Acoustical Society of America, 93(4), 2206-2220. (*Mostly to get the definitions of the degradation metrics used in Graham et al. 2017*)
+- Dabelsteen, T., Larsen, O. N., & Pedersen, S. B. (1993). [Habitat‐induced degradation of sound signals: Quantifying the effects of communication sounds and bird location on blur ratio, excess attenuation, and signal‐to‐noise ratio in blackbird song](https://backend.orbit.dtu.dk/ws/portalfiles/portal/4414480/Pedersen.pdf). The Journal of the Acoustical Society of America, 93(4), 2206-2220. (*Mostly to get the definitions of the degradation metrics used in Graham et al. 2017*)
 ```
