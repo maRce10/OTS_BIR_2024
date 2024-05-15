@@ -30,7 +30,7 @@ date: "`r Sys.Date()`"
 ------------------------------------------------------------------------
 
 ::: {.alert .alert-warning}
-### Aditional materials
+### Aditional resources
 
 #### Readings
 
@@ -97,9 +97,10 @@ date: "`r Sys.Date()`"
 ---
 
 ::: {.alert .alert-warning}
-### Videos
 
-#### Raven tutorials
+### Additional resources
+
+####  Raven tutorials
 
 -   [Introduction to the Raven Pro Interface](https://ravensoundsoftware.com/video-tutorials/english/01-introduction-to-the-raven-pro-interface/)
 -   [Introduction to selections and measurements](https://ravensoundsoftware.com/video-tutorials/english/02-selections-and-measurements/)
@@ -138,7 +139,10 @@ date: "`r Sys.Date()`"
 ---
 
 ::: {.alert .alert-warning}
-### Readings
+
+### Additional resources
+
+#### Readings
 
 -   Arasco, A. G., Manser, M., Watson, S. K., Kyabulima, S., Radford, A. N., Cant, M. A., & Garcia, M. (2024). [Testing the acoustic adaptation hypothesis with vocalizations from three mongoose species](https://www.sciencedirect.com/science/article/pii/S0003347222000574). Animal Behaviour, 187, 71-95.
 :::
@@ -190,14 +194,16 @@ date: "`r Sys.Date()`"
 
 ::: {.alert .alert-warning}
 
-### Readings
+### Additional resources
+
+#### Readings
 
 - Odom, K. J., Cain, K. E., Hall, M. L., Langmore, N. E., Mulder, R. A., Kleindorfer, S., ... & Webster, M. S. (2021). [Sex role similarity and sexual selection predict male and female song elaboration and dimorphism in fairy‐wrens](https://onlinelibrary.wiley.com/doi/pdf/10.1002/ece3.8378). Ecology and evolution, 11(24), 17901-17919.
 :::
 
  
 
-**Quality control in recordings and annotation** <a href="quality_checks.qmd" class="btn btn-warning btn-xs" role="button">Quality checks</a>
+**Quality control in recordings and annotations** <a href="quality_checks.qmd" class="btn btn-warning btn-xs" role="button">Quality checks</a>
 
 -   Check and modify sound file format (`check_wavs()`, `info_wavs()`, `duration_wavs()`, `mp32wav()` y `fix_wavs()`)
 -   Tuning spectrogram parameters (`tweak_spectro()`)
@@ -228,7 +234,9 @@ date: "`r Sys.Date()`"
 ---
 
 ::: {.alert .alert-warning}
-### Readings
+### Additional resources
+
+#### Readings
 
 -   Blog post: [Potential issues of the 'spectral parameters/PCA' approach](https://marce10.github.io/coded_bioacoustics/post/2018-07-04-issues_spectral_parameters-pca/)
 
