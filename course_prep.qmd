@@ -62,8 +62,6 @@ load_packages(packages = c(
   github = "maRce10/Rraven",
   github = "maRce10/ohun",
   github = "maRce10/suwo",
-  github = "spatstat/spatstat.core",
-  github = "maRce10/PhenotypeSpace",
   github = "maRce10/baRulho",
   github = "maRce10/dynaSpec"
  )
@@ -73,11 +71,27 @@ load_packages(packages = c(
 
 *if you have any issue installing 'bioacoustics' take a look at this fix: <https://stackoverflow.com/questions/53092646/unable-to-install-warbler-package-using-mac-os>*
 
-9)  warbleR depends heavily on the R package seewave. Seewave may require some extra steps to get installed. Take a look at seewave's website for further help: [http://rug.mnhn.fr/seewave](http://rug.mnhn.fr/seewave/) (and then go to "installation" and scroll down)
+9) We also need to install the package PhenotypeSpace, which requires some dependencies that have been archived in CRAN. So to install it please first download this two package tar.gz files and install them manually:
 
-10) Install Raven lite from [ttp://ravensoundsoftware.com/raven-pricing/](http://ravensoundsoftware.com/raven-pricing/)(scroll down to "Raven Lite 2.0" and click on "Order Free Raven Lite 2.0 License"). Ignore if you have any Raven version already installed.
+  - [rgeos_0.6-4.tar.gz](https://cran.r-project.org/src/contrib/Archive/rgeos/rgeos_0.6-4.tar.gz)
 
-11) Install ffmpeg (only needed for dynaSpec package, not critical):
+  - [spatstat.core_2.4-4.tar.gz](https://cran.r-project.org/src/contrib/Archive/spatstat.core/spatstat.core_2.4-4.tar.gz)
+
+Once you have install them you can install PhenotypeSpace:
+
+```{r}
+
+# install/load package
+load_packages(packages = c(github = "maRce10/PhenotypeSpace"))
+
+```
+
+
+10) warbleR depends heavily on the R package seewave. Seewave may require some extra steps to get installed. Take a look at seewave's website for further help: [http://rug.mnhn.fr/seewave](http://rug.mnhn.fr/seewave/) (and then go to "installation" and scroll down)
+
+11) Install Raven lite from [ttp://ravensoundsoftware.com/raven-pricing/](http://ravensoundsoftware.com/raven-pricing/)(scroll down to "Raven Lite 2.0" and click on "Order Free Raven Lite 2.0 License"). Ignore if you have any Raven version already installed.
+
+12) Install ffmpeg (only needed for dynaSpec package, not critical):
 
 <https://ffmpeg.org/download.html>
 
@@ -85,15 +99,15 @@ take a look at this link if you have issues installing ffmpeg on windows:
 
 <https://github.com/maRce10/dynaSpec/issues/3>
 
-12) Install Audacity (not critical, you can use Adobe Audition instead):
+13) Install Audacity (not critical, you can use Adobe Audition instead):
 
 <https://www.audacityteam.org/download/>
 
-13) Install SOX. It can be downloaded from here (not critical but could be useful): [http://sox.sourceforge.net](http://sox.sourceforge.net/) (*Not critical*)
+14) Install SOX. It can be downloaded from here (not critical but could be useful): [http://sox.sourceforge.net](http://sox.sourceforge.net/) (*Not critical*)
 
-14) Install FLAC. It can be downloaded from here (also not critical): [https://xiph.org/flac/download.html](https://xiph.org/flac/download.html) (*Not critical*)
+15) Install FLAC. It can be downloaded from here (also not critical): [https://xiph.org/flac/download.html](http://sox.sourceforge.net/) (*Not critical*)
 
-15) Note that you can also run the code using google colab. Take a look at this notebook: [https://colab.research.google.com/](https://colab.research.google.com/drive/1KKmndmWB73ZDLfT0eVBArEZX4eVGsVMc?usp=sharing#scrollTo=05bsvm_f7UNt)
+16) Note that you can also run the code using google colab. Take a look at this notebook: [https://colab.research.google.com/](https://colab.research.google.com/drive/1KKmndmWB73ZDLfT0eVBArEZX4eVGsVMc?usp=sharing#scrollTo=05bsvm_f7UNt)
 
  
 

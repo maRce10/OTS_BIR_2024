@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-05-13">
+<meta name="dcterms.date" content="2024-05-15">
 
 <title>OTS Bioacoustic Analysis in R 2024 - Building spectrograms</title>
 <style>
@@ -239,8 +239,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Contents</h2>
    
   <ul class="collapse">
-  <li><a href="#fourier-transformation" id="toc-fourier-transformation" class="nav-link active" data-scroll-target="#fourier-transformation"><span class="header-section-number">1</span> Fourier transformation</a></li>
-  <li><a href="#from-the-fourier-transformation-to-the-spectrogram" id="toc-from-the-fourier-transformation-to-the-spectrogram" class="nav-link" data-scroll-target="#from-the-fourier-transformation-to-the-spectrogram"><span class="header-section-number">2</span> From the Fourier transformation to the spectrogram</a></li>
+  <li><a href="#fourier-transform" id="toc-fourier-transform" class="nav-link active" data-scroll-target="#fourier-transform"><span class="header-section-number">1</span> Fourier transform</a></li>
+  <li><a href="#from-the-fourier-transform-to-the-spectrogram" id="toc-from-the-fourier-transform-to-the-spectrogram" class="nav-link" data-scroll-target="#from-the-fourier-transform-to-the-spectrogram"><span class="header-section-number">2</span> From the Fourier transform to the spectrogram</a></li>
   <li><a href="#overlap" id="toc-overlap" class="nav-link" data-scroll-target="#overlap"><span class="header-section-number">3</span> Overlap</a></li>
   <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">4</span> Limitations</a></li>
   <li><a href="#creating-spectrograms-in-r" id="toc-creating-spectrograms-in-r" class="nav-link" data-scroll-target="#creating-spectrograms-in-r"><span class="header-section-number">5</span> Creating spectrograms in R</a></li>
@@ -269,7 +269,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 13, 2024</p>
+      <p class="date">May 15, 2024</p>
     </div>
   </div>
   
@@ -303,9 +303,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(orni)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<section id="fourier-transformation" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="fourier-transformation"><span class="header-section-number">1</span> Fourier transformation</h2>
-<p>In order to understand the information contained in a spectrogram it is necessary to understand, at least briefly, the <a href="https://en.wikipedia.org/wiki/Fourier_transform">Fourier transformation</a>. In simple words, this is a mathematical transformation that detects the periodicity in time series, identifying the different frequencies that compose them and their relative energy. Therefore it is said that it transforms the signals from the time domain to the frequency domain.</p>
+<section id="fourier-transform" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="fourier-transform"><span class="header-section-number">1</span> Fourier transform</h2>
+<p>In order to understand the information contained in a spectrogram it is necessary to understand, at least briefly, the <a href="https://en.wikipedia.org/wiki/Fourier_transform">Fourier transform</a>. In simple words, this is a mathematical transformation that detects the periodicity in time series, identifying the different frequencies that compose them and their relative energy. Therefore it is said that it transforms the signals from the time domain to the frequency domain.</p>
 <p>To better understand how it works, we can simulate time series composed of pre-defined frequencies. In this example we simulate 3 frequencies and join them in a single time series:</p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -435,8 +435,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>&nbsp;</p>
 </section>
-<section id="from-the-fourier-transformation-to-the-spectrogram" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="from-the-fourier-transformation-to-the-spectrogram"><span class="header-section-number">2</span> From the Fourier transformation to the spectrogram</h2>
+<section id="from-the-fourier-transform-to-the-spectrogram" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="from-the-fourier-transform-to-the-spectrogram"><span class="header-section-number">2</span> From the Fourier transform to the spectrogram</h2>
 <p>The spectrograms are constructed of the spectral decomposition of discrete time segments of amplitude values. Each segment (or window) of time is a column of spectral density values in a frequency range. Take for example this simple modulated sound, which goes up and down in frequency:</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -508,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>&nbsp;</p>
-<p>This increase in spectrogram sharpness does not come without a cost. The longer the time windows, the greater the number of Fourier transformations to compute, and therefore, the greater the duration of the process. This graphic shows the increase in duration as a function of the number of windows on my computer:</p>
+<p>This increase in spectrogram sharpness does not come without a cost. The longer the time windows, the greater the number of Fourier transforms to compute, and therefore, the greater the duration of the process. This graphic shows the increase in duration as a function of the number of windows on my computer:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>

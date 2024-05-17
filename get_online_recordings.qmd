@@ -12,6 +12,12 @@ date: "`r Sys.Date()`"
 
  
 
+```{r, echo=FALSE}
+
+source("~/Dropbox/R_package_testing/suwo/R/map_locations.R")
+```
+
+
 <font size="4">
 
 ## Getting recordings from online repositories
@@ -48,7 +54,7 @@ Once you feel fine with the subset of data you can go ahead and download it as f
 
 ```{r, eval = FALSE, fig.width=10}
 
-download_media(X = song_phae_his, 
+download_media(metadata = song_phae_his, 
          path = "DIRECTORY WHERE YOU WANT TO SAVE THE FILES")
 
 ```

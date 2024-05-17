@@ -12,7 +12,7 @@ title: <i>ohun</i>&#x3A; optimizing acoustic signal detection
 
  
 
-[ohun](https://github.com/maRce10/ohun) is intended to facilitate the automated detection of sound events, providing functions to diagnose and optimize detection routines. Detections from other software can also be explored and optimized.
+[ohun](https://docs.ropensci.org/ohun/) is intended to facilitate the automated detection of sound events, providing functions to diagnose and optimize detection routines. Detections from other software can also be explored and optimized.
 
  
 

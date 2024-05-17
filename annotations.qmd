@@ -100,7 +100,7 @@ Annotation tables can be generated within R, or imported from sound analysis pro
 
 ## Raven
 
-[Raven sound analysis software](http://www.birds.cornell.edu/brp/raven/RavenOverview.html) ([Cornell Lab of Ornithology](http://www.birds.cornell.edu)) provides very powerful tools for the analysis of sounds (animals). **Raven** allows you to use the cursor to manually define the frequency and time limits of the signals. It is a very flexible and user friendly program. The annotations can be saved in a selection file (selection table) in .txt format:
+[Raven sound analysis software](https://www.birds.cornell.edu/ccb/raven/RavenOverview.html) ([Cornell Lab of Ornithology](http://www.birds.cornell.edu)) provides very powerful tools for the analysis of sounds (animals). **Raven** allows you to use the cursor to manually define the frequency and time limits of the signals. It is a very flexible and user friendly program. The annotations can be saved in a selection file (selection table) in .txt format:
 
  
 
@@ -494,7 +494,7 @@ w1
 
 The index argument indicates the row of the selection that will be read.
 
-This new object class allows to share complete data sets, including acoustic data. For example, the following code downloads a subset of the data used in [Araya-Salas *et al* (2017)](https://marceloarayasalas.weebly.com/uploads/2/5/5/2/25524573/araya-salas_smith-vidaurre___webster_2017._table_s1._recording_metadata.xlsx) (can also be downloaded from [here](https://marceloarayasalas.weebly.com/uploads/2/5/5/2/25524573/extended.selection.%20table.araya-salas.et.al.2017.bioacoustics.100.sels.rds)):
+This new object class allows to share complete data sets, including acoustic data. For example, the following code downloads a subset of the data used in [Araya-Salas *et al* (2017)](https://github.com/maRce10/OTS_BIR_2024/raw/master/data/extended.selection.table.araya-salas.et.al.2017.bioacoustics.100.sels.rds):
 
 ```{r extn.sel_19, eval = T}
 
@@ -546,9 +546,9 @@ for(i in 1:6){
 
 -   Run the example code in the `selection_table()` function documentation
 
--   What do the arguments "mar" and "by.song" do?
+-   What do the arguments "mar" and "by.song" from `selection_table()` do?
 
--   Measure the peak frequency of the 8th selection
+-   Measure the peak frequency of the 8th selection (hint: use seewave's `fpeaks()`)
 :::
 
  

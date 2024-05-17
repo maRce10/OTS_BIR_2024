@@ -131,7 +131,7 @@ source("~/Dropbox/R_package_testing/warbleR/R/read_sound_file.R")
 source("~/Dropbox/R_package_testing/warbleR/R/warbleR_options.R")
 opar <- par()
 
-par(mar = c(4, 4, 1, 1), bg = "#daeace")
+par(mar = c(4, 4, 1, 1), bg = "#d1e7dd")
 # generate sine wave
 sn.wv <- tuneR::sine(freq = 440, duration = 200, xunit = "samples", samp.rate = 44100)
 
@@ -156,7 +156,7 @@ Sampling should be good enough so the regularity of the sine wave can be reconst
 ```{r, echo = FALSE, out.width="100%", fig.height= 3, warning=FALSE, message=FALSE}
 
 
-par(mar = c(4, 4, 1, 1), bg = "#daeace")
+par(mar = c(4, 4, 1, 1), bg = "#d1e7dd")
 # generate sine wave
 sn.wv <- tuneR::sine(freq = 440, duration = 50, xunit = "samples", samp.rate = 11025)
 
@@ -180,7 +180,7 @@ As you can see way less samples are taken per unit of time. The threshold at whi
 
 opar <- par()
 
-par(mar = c(4, 4, 1, 1), bg = "#daeace")
+par(mar = c(4, 4, 1, 1), bg = "#d1e7dd")
 # generate sine wave
 sn.wv <- tuneR::sine(freq = 400, duration = 200, xunit = "samples", samp.rate = 40000)
 sn.wv2 <- tuneR::sine(freq = 400, duration = 4, xunit = "samples", samp.rate = 800)
@@ -214,7 +214,7 @@ opar <- par()
 
 intervals <- 4
 
-par(mar = c(4, 4, 1, 1), bg = "#daeace")
+par(mar = c(4, 4, 1, 1), bg = "#d1e7dd")
 # generate sine wave
 sn.wv <- tuneR::sine(freq = 440, duration = 200, xunit = "samples", samp.rate = 44100)
 
@@ -240,7 +240,7 @@ points(y = quant[seq(0, length(sn.wv), 10)], x = seq(0, duration(sn.wv), length.
 
  
 
-Rounding and data loss is more obvious if we bind the sampled points with lines:
+Rounding and data loss is more obvious if we add lines to the sampled points:
 
 ```{r, echo = FALSE, out.width="100%", fig.height= 3, warning=FALSE, message=FALSE}
 
@@ -248,7 +248,7 @@ opar <- par()
 
 intervals <- 4
 
-par(mar = c(4, 4, 1, 1), bg = "#daeace")
+par(mar = c(4, 4, 1, 1), bg = "#d1e7dd")
 # generate sine wave
 sn.wv <- tuneR::sine(freq = 440, duration = 200, xunit = "samples", samp.rate = 44100)
 
@@ -290,7 +290,7 @@ opar <- par()
 
 intervals <- 8
 
-par(mar = c(4, 4, 1, 1), bg = "#daeace")
+par(mar = c(4, 4, 1, 1), bg = "#d1e7dd")
 # generate sine wave
 sn.wv <- tuneR::sine(freq = 440, duration = 200, xunit = "samples", samp.rate = 44100)
 
@@ -332,7 +332,7 @@ opar <- par()
 
 intervals <- 2 ^ 4
 
-par(mar = c(4, 4, 1, 1), bg = "#daeace")
+par(mar = c(4, 4, 1, 1), bg = "#d1e7dd")
 # generate sine wave
 sn.wv <- tuneR::sine(freq = 440, duration = 200, xunit = "samples", samp.rate = 44100)
 
@@ -377,7 +377,7 @@ opar <- par()
 
 intervals <- 2 ^ 8
 
-par(mar = c(4, 4, 1, 1), bg = "#daeace")
+par(mar = c(4, 4, 1, 1), bg = "#d1e7dd")
 # generate sine wave
 sn.wv <- tuneR::sine(freq = 440, duration = 200, xunit = "samples", samp.rate = 44100)
 
@@ -893,7 +893,7 @@ plot(wav@left)
 wav <- sine(freq = 440, duration = 500, 
             xunit = "samples", samp.rate = 44100)
 
-par(bg = "#ccebf5", mar = c(5, 4, 1, 0) + 0.1)
+par(bg = "#cff4fc", mar = c(5, 4, 1, 0) + 0.1)
 
 # plot
 plot(wav@left) 

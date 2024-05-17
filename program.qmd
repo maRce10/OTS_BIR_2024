@@ -25,12 +25,12 @@ date: "`r Sys.Date()`"
 
  
 
-## Day 1 
+## Day 1 [(video)](https://youtu.be/Cv_Y4n-nG4k)
 
 ------------------------------------------------------------------------
 
 ::: {.alert .alert-warning}
-### Aditional materials
+### Aditional resources
 
 #### Readings
 
@@ -88,18 +88,19 @@ date: "`r Sys.Date()`"
 4.  Explore the recordings with any spectrogram creating GUI program
 :::
 
-------------------------------------------------------------------------
+---
 
  
 
-## Day 2 
+## Day 2 [(video)](https://youtu.be/DI8WrdP_cqc)
 
-------------------------------------------------------------------------
+---
 
 ::: {.alert .alert-warning}
-### Videos
 
-#### Raven tutorials
+### Additional resources
+
+####  Raven tutorials
 
 -   [Introduction to the Raven Pro Interface](https://ravensoundsoftware.com/video-tutorials/english/01-introduction-to-the-raven-pro-interface/)
 -   [Introduction to selections and measurements](https://ravensoundsoftware.com/video-tutorials/english/02-selections-and-measurements/)
@@ -129,16 +130,19 @@ date: "`r Sys.Date()`"
 1.  Use Raven Pro to annotate some of the signals found in the xeno-canto recordings you downloaded previously
 :::
 
-------------------------------------------------------------------------
+---
 
  
 
-## Day 3 
+## Day 3 [(video)](https://youtu.be/kGXTMgSEErE)
 
-------------------------------------------------------------------------
+---
 
 ::: {.alert .alert-warning}
-### Readings
+
+### Additional resources
+
+#### Readings
 
 -   Arasco, A. G., Manser, M., Watson, S. K., Kyabulima, S., Radford, A. N., Cant, M. A., & Garcia, M. (2024). [Testing the acoustic adaptation hypothesis with vocalizations from three mongoose species](https://www.sciencedirect.com/science/article/pii/S0003347222000574). Animal Behaviour, 187, 71-95.
 :::
@@ -180,24 +184,26 @@ date: "`r Sys.Date()`"
 2.  Double-check annotations using Raven (export data from R to Raven)
 :::
 
-------------------------------------------------------------------------
+---
 
  
 
-## Day 4 
+## Day 4 [(video)](https://youtu.be/JTLPj2aLWdA)
 
-------------------------------------------------------------------------
+---
 
 ::: {.alert .alert-warning}
 
-### Readings
+### Additional resources
+
+#### Readings
 
 - Odom, K. J., Cain, K. E., Hall, M. L., Langmore, N. E., Mulder, R. A., Kleindorfer, S., ... & Webster, M. S. (2021). [Sex role similarity and sexual selection predict male and female song elaboration and dimorphism in fairy‐wrens](https://onlinelibrary.wiley.com/doi/pdf/10.1002/ece3.8378). Ecology and evolution, 11(24), 17901-17919.
 :::
 
  
 
-**Quality control in recordings and annotation** <a href="quality_checks.qmd" class="btn btn-warning btn-xs" role="button">Quality checks</a>
+**Quality control in recordings and annotations** <a href="quality_checks.qmd" class="btn btn-warning btn-xs" role="button">Quality checks</a>
 
 -   Check and modify sound file format (`check_wavs()`, `info_wavs()`, `duration_wavs()`, `mp32wav()` y `fix_wavs()`)
 -   Tuning spectrogram parameters (`tweak_spectro()`)
@@ -219,16 +225,18 @@ date: "`r Sys.Date()`"
 3.  Summarize variation at higher hierachical levels (if necessary)
 :::
 
-------------------------------------------------------------------------
+---
 
  
 
 ## Day 5 
 
-------------------------------------------------------------------------
+---
 
 ::: {.alert .alert-warning}
-### Readings
+### Additional resources
+
+#### Readings
 
 -   Blog post: [Potential issues of the 'spectral parameters/PCA' approach](https://marce10.github.io/coded_bioacoustics/post/2018-07-04-issues_spectral_parameters-pca/)
 
@@ -270,11 +278,11 @@ to warbleR</a>
 -   Selection table manipulation
 -   warbleR functions and the bioacoustics analysis workflow
 
-- Gibb, R., Browning, E., Glover‐Kapfer, P., & Jones, K. E. (2019). [Emerging opportunities and challenges for passive acoustics in ecological assessment and monitoring](https://besjournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/2041-210X.13101). Methods in Ecology and Evolution, 10(2), 169-185.´
+- Gibb, R., Browning, E., Glover‐Kapfer, P., & Jones, K. E. (2019). [Emerging opportunities and challenges for passive acoustics in ecological assessment and monitoring](https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210x.13101). Methods in Ecology and Evolution, 10(2), 169-185.´
 
 #### Signal transmission
 
 - Graham, B. A., Sandoval, L., Dabelsteen, T., & Mennill, D. J. (2017). [A test of the Acoustic Adaptation Hypothesis in three types of tropical forest: degradation of male and female Rufous-and-white Wren songs](https://www.tandfonline.com/doi/pdf/10.1080/09524622.2016.1181574?casa_token=AzHx1ABmGXUAAAAA:f33oQnqbUrBR2q6om8FmkKjRNOxN_WDQqIa1Szly_rdUlvV4pLffuFXZtWyj6T6FQyV5NhVqIdwOITZqKw). Bioacoustics, 26(1), 37-61.
 
-- Dabelsteen, T., Larsen, O. N., & Pedersen, S. B. (1993). [Habitat‐induced degradation of sound signals: Quantifying the effects of communication sounds and bird location on blur ratio, excess attenuation, and signal‐to‐noise ratio in blackbird song](https://www.academia.edu/download/72224403/eed203af725673bae94999ae0258049db24c.pdf). The Journal of the Acoustical Society of America, 93(4), 2206-2220. (*Mostly to get the definitions of the degradation metrics used in Graham et al. 2017*)
+- Dabelsteen, T., Larsen, O. N., & Pedersen, S. B. (1993). [Habitat‐induced degradation of sound signals: Quantifying the effects of communication sounds and bird location on blur ratio, excess attenuation, and signal‐to‐noise ratio in blackbird song](https://backend.orbit.dtu.dk/ws/portalfiles/portal/4414480/Pedersen.pdf). The Journal of the Acoustical Society of America, 93(4), 2206-2220. (*Mostly to get the definitions of the degradation metrics used in Graham et al. 2017*)
 ```

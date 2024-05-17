@@ -1,71 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://marce10.github.io/OTS_BIR_2024/program.html</loc>
+    <lastmod>2024-05-17T13:12:09.726Z</lastmod>
+  </url>
+  <url>
     <loc>https://marce10.github.io/OTS_BIR_2024/sound.html</loc>
-    <lastmod>2024-05-13T18:51:37.450Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/r_basics.html</loc>
-    <lastmod>2024-05-02T03:28:32.715Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/spectrograms.html</loc>
-    <lastmod>2024-05-02T03:29:45.955Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/ohun.html</loc>
-    <lastmod>2024-05-02T03:27:58.947Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/measure_structure_green_hermit.html</loc>
-    <lastmod>2023-05-17T20:06:52.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/seewave.html</loc>
-    <lastmod>2024-05-02T03:28:49.455Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/get_online_recordings.html</loc>
-    <lastmod>2024-05-13T17:55:22.331Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/instructor.html</loc>
-    <lastmod>2024-05-02T03:24:21.989Z</lastmod>
+    <lastmod>2024-05-15T04:23:19.522Z</lastmod>
   </url>
   <url>
     <loc>https://marce10.github.io/OTS_BIR_2024/index.html</loc>
     <lastmod>2024-05-13T15:31:56.903Z</lastmod>
   </url>
   <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/quality_checks.html</loc>
-    <lastmod>2024-05-17T17:10:50.590Z</lastmod>
-  </url>
-  <url>
     <loc>https://marce10.github.io/OTS_BIR_2024/course_prep.html</loc>
-    <lastmod>2024-05-15T20:03:32.379Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/program.html</loc>
-    <lastmod>2024-05-13T15:51:22.872Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/introduction.html</loc>
-    <lastmod>2024-05-12T01:28:19.021Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/comparing_methods.html</loc>
-    <lastmod>2024-05-02T03:18:26.721Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/intro_to_warbler.html</loc>
-    <lastmod>2024-05-02T03:24:59.533Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_BIR_2024/measure_acoustic_structure.html</loc>
-    <lastmod>2024-05-02T03:25:52.881Z</lastmod>
+    <lastmod>2024-05-15T15:53:44.124Z</lastmod>
   </url>
   <url>
     <loc>https://marce10.github.io/OTS_BIR_2024/annotations.html</loc>
-    <lastmod>2024-05-02T03:18:51.457Z</lastmod>
+    <lastmod>2024-05-16T16:50:18.303Z</lastmod>
   </url>
 </urlset>
