@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-05-13">
+<meta name="dcterms.date" content="2024-05-15">
 
 <title>OTS Bioacoustic Analysis in R 2024</title>
 <style>
@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 13, 2024</p>
+      <p class="date">May 15, 2024</p>
     </div>
   </div>
   
@@ -329,7 +329,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="https://www.audacityteam.org/download/" class="uri">https://www.audacityteam.org/download/</a></p>
 <ol start="13" type="1">
 <li><p>Install SOX. It can be downloaded from here (not critical but could be useful): <a href="http://sox.sourceforge.net/">http://sox.sourceforge.net</a> (<em>Not critical</em>)</p></li>
-<li><p>Install FLAC. It can be downloaded from here (also not critical): <a href="http://sox.sourceforge.net/">https://xiph.org/flac/download.html</a> (<em>Not critical</em>)</p></li>
+<li><p>Install FLAC. It can be downloaded from here (also not critical): <a href="https://xiph.org/flac/download.html">https://xiph.org/flac/download.html</a> (<em>Not critical</em>)</p></li>
 <li><p>Note that you can also run the code using google colab. Take a look at this notebook: <a href="https://colab.research.google.com/drive/1KKmndmWB73ZDLfT0eVBArEZX4eVGsVMc?usp=sharing#scrollTo=05bsvm_f7UNt">https://colab.research.google.com/</a></p></li>
 </ol>
 <p>&nbsp;</p>
@@ -439,6 +439,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -480,7 +485,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

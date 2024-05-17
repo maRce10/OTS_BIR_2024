@@ -180,21 +180,7 @@ Another useful function to check file properties is `wav_dur()`. This function r
 
 `check_sound_files()` should be the first function that should be used before running any **warbleR** analysis. The function simply checks if the sound files in '.wav' format in the working directory can be read in R. For example, the following code checks all the files in the 'examples' folder, which should detect the 'corrupted_file.wav':
 
-```{r, eval = FALSE}
-
-check_sound_files()
-
-```
-
-```{r, echo = FALSE}
-
-check_sound_files()
-
-```
-
-If we remove that file from the folder, the function returns the following message:
-
-```{r, eval = FALSE}
+```{r, eval = TRUE, message=TRUE, warning=TRUE}
 
 check_sound_files()
 

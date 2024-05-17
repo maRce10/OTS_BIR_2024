@@ -38,11 +38,10 @@ song_phae_his <- phae_his[grep("song", ignore.case = TRUE, phae_his$vocalization
 
 Map locations using `map_locations()`:
 
-```{r, results = 'asis', fig.width=10, echo=TRUE}
+```{r, fig.width=10, echo=TRUE}
 
-map <- map_locations(song_phae_his)
+map_locations(song_phae_his)
 
-map
 ```
 
 Once you feel fine with the subset of data you can go ahead and download it as follows:
