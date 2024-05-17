@@ -188,7 +188,7 @@ date: "`r Sys.Date()`"
 
  
 
-## Day 4 
+## Day 4 [(video)](https://youtu.be/JTLPj2aLWdA)
 
 ---
 

@@ -546,9 +546,9 @@ for(i in 1:6){
 
 -   Run the example code in the `selection_table()` function documentation
 
--   What do the arguments "mar" and "by.song" do?
+-   What do the arguments "mar" and "by.song" from `selection_table()` do?
 
--   Measure the peak frequency of the 8th selection
+-   Measure the peak frequency of the 8th selection (hint: use seewave's `fpeaks()`)
 :::
 
  
