@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-05-17">
+<meta name="dcterms.date" content="2024-05-18">
 
 <title>OTS Bioacoustic Analysis in R 2024 - Quality checks for recordings and annotations</title>
 <style>
@@ -272,7 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 17, 2024</p>
+      <p class="date">May 18, 2024</p>
     </div>
   </div>
   
@@ -596,13 +596,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">check_sound_files</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-stderr">
+<pre><code>All files can be read</code></pre>
 </div>
-<p>If we remove that file from the folder, the function returns the following message:</p>
-<div class="cell">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">check_sound_files</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Not all sound files have the same sampling rate (potentially problematic, particularly for cross_correlation())</code></pre>
+</div>
 </div>
 <p>&nbsp;</p>
 </section>
@@ -620,9 +619,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">tweak_spectro</span>(<span class="at">X =</span> lbh_selec_table, <span class="at">wl =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">1000</span>), <span class="at">wn =</span> <span class="fu">c</span>(<span class="st">"hanning"</span>,</span>
-<span id="cb10-2"><a href="#cb10-2"></a>    <span class="st">"hamming"</span>, <span class="st">"rectangle"</span>), <span class="at">length.out =</span> <span class="dv">16</span>, <span class="at">nrow =</span> <span class="dv">8</span>, <span class="at">ncol =</span> <span class="dv">6</span>,</span>
-<span id="cb10-3"><a href="#cb10-3"></a>    <span class="at">width =</span> <span class="dv">15</span>, <span class="at">height =</span> <span class="dv">20</span>, <span class="at">rm.axes =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="dv">1</span>, <span class="at">box =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">tweak_spectro</span>(<span class="at">X =</span> lbh_selec_table, <span class="at">wl =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">1000</span>), <span class="at">wn =</span> <span class="fu">c</span>(<span class="st">"hanning"</span>,</span>
+<span id="cb11-2"><a href="#cb11-2"></a>    <span class="st">"hamming"</span>, <span class="st">"rectangle"</span>), <span class="at">length.out =</span> <span class="dv">16</span>, <span class="at">nrow =</span> <span class="dv">8</span>, <span class="at">ncol =</span> <span class="dv">6</span>,</span>
+<span id="cb11-3"><a href="#cb11-3"></a>    <span class="at">width =</span> <span class="dv">15</span>, <span class="at">height =</span> <span class="dv">20</span>, <span class="at">rm.axes =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="dv">1</span>, <span class="at">box =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><img src="images/spec_param1.jpeg" alt="viewSpec" width="780"></p>
@@ -632,19 +631,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># install.packages('RColorBrewer')</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="fu">library</span>(RColorBrewer)</span>
-<span id="cb11-4"><a href="#cb11-4"></a></span>
-<span id="cb11-5"><a href="#cb11-5"></a><span class="co"># crear paleta</span></span>
-<span id="cb11-6"><a href="#cb11-6"></a>cmc <span class="ot">&lt;-</span> <span class="cf">function</span>(n) <span class="cf">if</span> (n <span class="sc">&gt;</span> <span class="dv">5</span>) <span class="fu">rep</span>(<span class="fu">adjustcolor</span>(<span class="fu">brewer.pal</span>(<span class="dv">5</span>, <span class="st">"Spectral"</span>),</span>
-<span id="cb11-7"><a href="#cb11-7"></a>    <span class="at">alpha.f =</span> <span class="fl">0.6</span>), <span class="fu">ceiling</span>(n<span class="sc">/</span><span class="dv">4</span>))[<span class="dv">1</span><span class="sc">:</span>n] <span class="cf">else</span> <span class="fu">adjustcolor</span>(<span class="fu">brewer.pal</span>(n,</span>
-<span id="cb11-8"><a href="#cb11-8"></a>    <span class="st">"Spectral"</span>), <span class="at">alpha.f =</span> <span class="fl">0.6</span>)</span>
-<span id="cb11-9"><a href="#cb11-9"></a></span>
-<span id="cb11-10"><a href="#cb11-10"></a><span class="fu">tweak_spectro</span>(<span class="at">X =</span> lbh_selec_table, <span class="at">wl =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">1000</span>), <span class="at">wn =</span> <span class="fu">c</span>(<span class="st">"hanning"</span>,</span>
-<span id="cb11-11"><a href="#cb11-11"></a>    <span class="st">"hamming"</span>, <span class="st">"rectangle"</span>), <span class="at">length.out =</span> <span class="dv">16</span>, <span class="at">nrow =</span> <span class="dv">8</span>, <span class="at">ncol =</span> <span class="dv">6</span>,</span>
-<span id="cb11-12"><a href="#cb11-12"></a>    <span class="at">width =</span> <span class="dv">15</span>, <span class="at">height =</span> <span class="dv">20</span>, <span class="at">rm.axes =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="dv">1</span>, <span class="at">box =</span> F, <span class="at">group.tag =</span> <span class="st">"wn"</span>,</span>
-<span id="cb11-13"><a href="#cb11-13"></a>    <span class="at">tag.pal =</span> <span class="fu">list</span>(cmc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># install.packages('RColorBrewer')</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="fu">library</span>(RColorBrewer)</span>
+<span id="cb12-4"><a href="#cb12-4"></a></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="co"># crear paleta</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a>cmc <span class="ot">&lt;-</span> <span class="cf">function</span>(n) <span class="cf">if</span> (n <span class="sc">&gt;</span> <span class="dv">5</span>) <span class="fu">rep</span>(<span class="fu">adjustcolor</span>(<span class="fu">brewer.pal</span>(<span class="dv">5</span>, <span class="st">"Spectral"</span>),</span>
+<span id="cb12-7"><a href="#cb12-7"></a>    <span class="at">alpha.f =</span> <span class="fl">0.6</span>), <span class="fu">ceiling</span>(n<span class="sc">/</span><span class="dv">4</span>))[<span class="dv">1</span><span class="sc">:</span>n] <span class="cf">else</span> <span class="fu">adjustcolor</span>(<span class="fu">brewer.pal</span>(n,</span>
+<span id="cb12-8"><a href="#cb12-8"></a>    <span class="st">"Spectral"</span>), <span class="at">alpha.f =</span> <span class="fl">0.6</span>)</span>
+<span id="cb12-9"><a href="#cb12-9"></a></span>
+<span id="cb12-10"><a href="#cb12-10"></a><span class="fu">tweak_spectro</span>(<span class="at">X =</span> lbh_selec_table, <span class="at">wl =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">1000</span>), <span class="at">wn =</span> <span class="fu">c</span>(<span class="st">"hanning"</span>,</span>
+<span id="cb12-11"><a href="#cb12-11"></a>    <span class="st">"hamming"</span>, <span class="st">"rectangle"</span>), <span class="at">length.out =</span> <span class="dv">16</span>, <span class="at">nrow =</span> <span class="dv">8</span>, <span class="at">ncol =</span> <span class="dv">6</span>,</span>
+<span id="cb12-12"><a href="#cb12-12"></a>    <span class="at">width =</span> <span class="dv">15</span>, <span class="at">height =</span> <span class="dv">20</span>, <span class="at">rm.axes =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="dv">1</span>, <span class="at">box =</span> F, <span class="at">group.tag =</span> <span class="st">"wn"</span>,</span>
+<span id="cb12-13"><a href="#cb12-13"></a>    <span class="at">tag.pal =</span> <span class="fu">list</span>(cmc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><img src="images/spec_param3.jpeg" alt="viewSpec" width="780"></p>
@@ -653,10 +652,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">tweak_spectro</span>(<span class="at">X =</span> lbh_selec_table, <span class="at">wl =</span> <span class="dv">220</span>, <span class="at">collev.min =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="sc">-</span><span class="dv">100</span>),</span>
-<span id="cb12-2"><a href="#cb12-2"></a>    <span class="at">pal =</span> <span class="fu">c</span>(<span class="st">"reverse.gray.colors.2"</span>, <span class="st">"reverse.topo.colors"</span>, <span class="st">"reverse.terrain.colors"</span>),</span>
-<span id="cb12-3"><a href="#cb12-3"></a>    <span class="at">length.out =</span> <span class="dv">16</span>, <span class="at">nrow =</span> <span class="dv">8</span>, <span class="at">ncol =</span> <span class="dv">6</span>, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">height =</span> <span class="dv">20</span>,</span>
-<span id="cb12-4"><a href="#cb12-4"></a>    <span class="at">rm.axes =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="dv">1</span>, <span class="at">box =</span> F, <span class="at">group.tag =</span> <span class="st">"pal"</span>, <span class="at">tag.pal =</span> <span class="fu">list</span>(cmc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">tweak_spectro</span>(<span class="at">X =</span> lbh_selec_table, <span class="at">wl =</span> <span class="dv">220</span>, <span class="at">collev.min =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="sc">-</span><span class="dv">100</span>),</span>
+<span id="cb13-2"><a href="#cb13-2"></a>    <span class="at">pal =</span> <span class="fu">c</span>(<span class="st">"reverse.gray.colors.2"</span>, <span class="st">"reverse.topo.colors"</span>, <span class="st">"reverse.terrain.colors"</span>),</span>
+<span id="cb13-3"><a href="#cb13-3"></a>    <span class="at">length.out =</span> <span class="dv">16</span>, <span class="at">nrow =</span> <span class="dv">8</span>, <span class="at">ncol =</span> <span class="dv">6</span>, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">height =</span> <span class="dv">20</span>,</span>
+<span id="cb13-4"><a href="#cb13-4"></a>    <span class="at">rm.axes =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="dv">1</span>, <span class="at">box =</span> F, <span class="at">group.tag =</span> <span class="st">"pal"</span>, <span class="at">tag.pal =</span> <span class="fu">list</span>(cmc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><img src="images/spec_param2.jpeg" alt="viewSpec" width="780"></p>
@@ -682,7 +681,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>cs <span class="ot">&lt;-</span> <span class="fu">check_sels</span>(lbh_selec_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>cs <span class="ot">&lt;-</span> <span class="fu">check_sels</span>(lbh_selec_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>&nbsp;</p>
@@ -690,7 +689,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>cs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>cs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
@@ -903,31 +902,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># copiar las primeras 6 filas</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a>st2 <span class="ot">&lt;-</span> lbh_selec_table[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, ]</span>
-<span id="cb15-3"><a href="#cb15-3"></a></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="co"># hacer caracter</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a>st2<span class="sc">$</span>sound.files <span class="ot">&lt;-</span> <span class="fu">as.character</span>(st2<span class="sc">$</span>sound.files)</span>
-<span id="cb15-6"><a href="#cb15-6"></a></span>
-<span id="cb15-7"><a href="#cb15-7"></a><span class="co"># cambiar nombre de archivo de sonido en sel 1</span></span>
-<span id="cb15-8"><a href="#cb15-8"></a>st2<span class="sc">$</span>sound.files[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"aaa.wav"</span></span>
-<span id="cb15-9"><a href="#cb15-9"></a></span>
-<span id="cb15-10"><a href="#cb15-10"></a><span class="co"># modificar fin en sel 3</span></span>
-<span id="cb15-11"><a href="#cb15-11"></a>st2<span class="sc">$</span>end[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb15-12"><a href="#cb15-12"></a></span>
-<span id="cb15-13"><a href="#cb15-13"></a><span class="co"># hacer top.freq igual q bottom freq en sel 3</span></span>
-<span id="cb15-14"><a href="#cb15-14"></a>st2<span class="sc">$</span>top.freq[<span class="dv">3</span>] <span class="ot">&lt;-</span> st2<span class="sc">$</span>bottom.freq[<span class="dv">3</span>]</span>
-<span id="cb15-15"><a href="#cb15-15"></a></span>
-<span id="cb15-16"><a href="#cb15-16"></a><span class="co"># modificar top freq en sel 5</span></span>
-<span id="cb15-17"><a href="#cb15-17"></a>st2<span class="sc">$</span>top.freq[<span class="dv">5</span>] <span class="ot">&lt;-</span> <span class="dv">200</span></span>
-<span id="cb15-18"><a href="#cb15-18"></a></span>
-<span id="cb15-19"><a href="#cb15-19"></a><span class="co"># modificar channes en sel 6</span></span>
-<span id="cb15-20"><a href="#cb15-20"></a>st2<span class="sc">$</span>channel[<span class="dv">6</span>] <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb15-21"><a href="#cb15-21"></a></span>
-<span id="cb15-22"><a href="#cb15-22"></a><span class="co"># revisar</span></span>
-<span id="cb15-23"><a href="#cb15-23"></a>cs <span class="ot">&lt;-</span> <span class="fu">check_sels</span>(st2)</span>
-<span id="cb15-24"><a href="#cb15-24"></a></span>
-<span id="cb15-25"><a href="#cb15-25"></a>cs[, <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">10</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="co"># copiar las primeras 6 filas</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>st2 <span class="ot">&lt;-</span> lbh_selec_table[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, ]</span>
+<span id="cb16-3"><a href="#cb16-3"></a></span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="co"># hacer caracter</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>st2<span class="sc">$</span>sound.files <span class="ot">&lt;-</span> <span class="fu">as.character</span>(st2<span class="sc">$</span>sound.files)</span>
+<span id="cb16-6"><a href="#cb16-6"></a></span>
+<span id="cb16-7"><a href="#cb16-7"></a><span class="co"># cambiar nombre de archivo de sonido en sel 1</span></span>
+<span id="cb16-8"><a href="#cb16-8"></a>st2<span class="sc">$</span>sound.files[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"aaa.wav"</span></span>
+<span id="cb16-9"><a href="#cb16-9"></a></span>
+<span id="cb16-10"><a href="#cb16-10"></a><span class="co"># modificar fin en sel 3</span></span>
+<span id="cb16-11"><a href="#cb16-11"></a>st2<span class="sc">$</span>end[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb16-12"><a href="#cb16-12"></a></span>
+<span id="cb16-13"><a href="#cb16-13"></a><span class="co"># hacer top.freq igual q bottom freq en sel 3</span></span>
+<span id="cb16-14"><a href="#cb16-14"></a>st2<span class="sc">$</span>top.freq[<span class="dv">3</span>] <span class="ot">&lt;-</span> st2<span class="sc">$</span>bottom.freq[<span class="dv">3</span>]</span>
+<span id="cb16-15"><a href="#cb16-15"></a></span>
+<span id="cb16-16"><a href="#cb16-16"></a><span class="co"># modificar top freq en sel 5</span></span>
+<span id="cb16-17"><a href="#cb16-17"></a>st2<span class="sc">$</span>top.freq[<span class="dv">5</span>] <span class="ot">&lt;-</span> <span class="dv">200</span></span>
+<span id="cb16-18"><a href="#cb16-18"></a></span>
+<span id="cb16-19"><a href="#cb16-19"></a><span class="co"># modificar channes en sel 6</span></span>
+<span id="cb16-20"><a href="#cb16-20"></a>st2<span class="sc">$</span>channel[<span class="dv">6</span>] <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb16-21"><a href="#cb16-21"></a></span>
+<span id="cb16-22"><a href="#cb16-22"></a><span class="co"># revisar</span></span>
+<span id="cb16-23"><a href="#cb16-23"></a>cs <span class="ot">&lt;-</span> <span class="fu">check_sels</span>(st2)</span>
+<span id="cb16-24"><a href="#cb16-24"></a></span>
+<span id="cb16-25"><a href="#cb16-25"></a>cs[, <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">10</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
@@ -1021,11 +1020,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="co"># using default parameters tweak_spectro()</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="fu">warbleR_options</span>(<span class="at">wav.path =</span> <span class="st">"./examples"</span>, <span class="at">wl =</span> <span class="dv">220</span>, <span class="at">wn =</span> <span class="st">"hanning"</span>,</span>
-<span id="cb16-3"><a href="#cb16-3"></a>    <span class="at">ovlp =</span> <span class="dv">90</span>, <span class="at">pal =</span> reverse.topo.colors)</span>
-<span id="cb16-4"><a href="#cb16-4"></a></span>
-<span id="cb16-5"><a href="#cb16-5"></a><span class="fu">spectrograms</span>(lbh_selec_table, <span class="at">collevels =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># using default parameters tweak_spectro()</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="fu">warbleR_options</span>(<span class="at">wav.path =</span> <span class="st">"./examples"</span>, <span class="at">wl =</span> <span class="dv">220</span>, <span class="at">wn =</span> <span class="st">"hanning"</span>,</span>
+<span id="cb17-3"><a href="#cb17-3"></a>    <span class="at">ovlp =</span> <span class="dv">90</span>, <span class="at">pal =</span> reverse.topo.colors)</span>
+<span id="cb17-4"><a href="#cb17-4"></a></span>
+<span id="cb17-5"><a href="#cb17-5"></a><span class="fu">spectrograms</span>(lbh_selec_table, <span class="at">collevels =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>&nbsp;</p>
@@ -1047,21 +1046,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># load package with color palettes</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="fu">library</span>(viridis)</span>
-<span id="cb17-3"><a href="#cb17-3"></a></span>
-<span id="cb17-4"><a href="#cb17-4"></a><span class="co"># create directory</span></span>
-<span id="cb17-5"><a href="#cb17-5"></a><span class="fu">dir.create</span>(<span class="st">"./examples/hermit"</span>)</span>
-<span id="cb17-6"><a href="#cb17-6"></a></span>
-<span id="cb17-7"><a href="#cb17-7"></a><span class="co"># download sound file</span></span>
-<span id="cb17-8"><a href="#cb17-8"></a>phae.stri <span class="ot">&lt;-</span> <span class="fu">query_xc</span>(<span class="at">qword =</span> <span class="st">"nr:154074"</span>, <span class="at">download =</span> <span class="cn">TRUE</span>, <span class="at">path =</span> <span class="st">"./examples/hermit"</span>)</span>
-<span id="cb17-9"><a href="#cb17-9"></a></span>
-<span id="cb17-10"><a href="#cb17-10"></a><span class="co"># Convert mp3 to wav format</span></span>
-<span id="cb17-11"><a href="#cb17-11"></a><span class="fu">mp32wav</span>(<span class="at">path =</span> <span class="st">"./examples/hermit/"</span>, <span class="at">pb =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb17-12"><a href="#cb17-12"></a></span>
-<span id="cb17-13"><a href="#cb17-13"></a><span class="co"># plot full spec</span></span>
-<span id="cb17-14"><a href="#cb17-14"></a><span class="fu">full_spectrograms</span>(<span class="at">sxrow =</span> <span class="dv">1</span>, <span class="at">rows =</span> <span class="dv">10</span>, <span class="at">pal =</span> magma, <span class="at">wl =</span> <span class="dv">200</span>, <span class="at">flim =</span> <span class="fu">c</span>(<span class="dv">3</span>,</span>
-<span id="cb17-15"><a href="#cb17-15"></a>    <span class="dv">10</span>), <span class="at">collevels =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">140</span>, <span class="dv">0</span>, <span class="dv">5</span>), <span class="at">path =</span> <span class="st">"./examples/hermit/"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># load package with color palettes</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb18-3"><a href="#cb18-3"></a></span>
+<span id="cb18-4"><a href="#cb18-4"></a><span class="co"># create directory</span></span>
+<span id="cb18-5"><a href="#cb18-5"></a><span class="fu">dir.create</span>(<span class="st">"./examples/hermit"</span>)</span>
+<span id="cb18-6"><a href="#cb18-6"></a></span>
+<span id="cb18-7"><a href="#cb18-7"></a><span class="co"># download sound file</span></span>
+<span id="cb18-8"><a href="#cb18-8"></a>phae.stri <span class="ot">&lt;-</span> <span class="fu">query_xc</span>(<span class="at">qword =</span> <span class="st">"nr:154074"</span>, <span class="at">download =</span> <span class="cn">TRUE</span>, <span class="at">path =</span> <span class="st">"./examples/hermit"</span>)</span>
+<span id="cb18-9"><a href="#cb18-9"></a></span>
+<span id="cb18-10"><a href="#cb18-10"></a><span class="co"># Convert mp3 to wav format</span></span>
+<span id="cb18-11"><a href="#cb18-11"></a><span class="fu">mp32wav</span>(<span class="at">path =</span> <span class="st">"./examples/hermit/"</span>, <span class="at">pb =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb18-12"><a href="#cb18-12"></a></span>
+<span id="cb18-13"><a href="#cb18-13"></a><span class="co"># plot full spec</span></span>
+<span id="cb18-14"><a href="#cb18-14"></a><span class="fu">full_spectrograms</span>(<span class="at">sxrow =</span> <span class="dv">1</span>, <span class="at">rows =</span> <span class="dv">10</span>, <span class="at">pal =</span> magma, <span class="at">wl =</span> <span class="dv">200</span>, <span class="at">flim =</span> <span class="fu">c</span>(<span class="dv">3</span>,</span>
+<span id="cb18-15"><a href="#cb18-15"></a>    <span class="dv">10</span>), <span class="at">collevels =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">140</span>, <span class="dv">0</span>, <span class="dv">5</span>), <span class="at">path =</span> <span class="st">"./examples/hermit/"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><img src="images/fullspec_hermit.gif" alt="hermit" width="700"></p>
@@ -1074,14 +1073,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># read bat inquiry data</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a>inq <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="at">file =</span> <span class="st">"ext_sel_tab_inquiry.RDS"</span>)</span>
-<span id="cb18-3"><a href="#cb18-3"></a></span>
-<span id="cb18-4"><a href="#cb18-4"></a><span class="fu">catalog</span>(<span class="at">X =</span> inq[<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, ], <span class="at">flim =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">50</span>), <span class="at">nrow =</span> <span class="dv">10</span>, <span class="at">ncol =</span> <span class="dv">10</span>,</span>
-<span id="cb18-5"><a href="#cb18-5"></a>    <span class="at">same.time.scale =</span> T, <span class="at">mar =</span> <span class="fl">0.01</span>, <span class="at">gr =</span> <span class="cn">FALSE</span>, <span class="at">img.suffix =</span> <span class="st">"inquiry"</span>,</span>
-<span id="cb18-6"><a href="#cb18-6"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"sound.files"</span>, <span class="st">"selec"</span>), <span class="at">legend =</span> <span class="dv">0</span>, <span class="at">rm.axes =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb18-7"><a href="#cb18-7"></a>    <span class="at">box =</span> F, <span class="at">group.tag =</span> <span class="st">"sound.files"</span>, <span class="at">tag.pal =</span> <span class="fu">list</span>(magma), <span class="at">width =</span> <span class="dv">20</span>,</span>
-<span id="cb18-8"><a href="#cb18-8"></a>    <span class="at">height =</span> <span class="dv">20</span>, <span class="at">pal =</span> viridis, <span class="at">collevels =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># read bat inquiry data</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>inq <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="at">file =</span> <span class="st">"ext_sel_tab_inquiry.RDS"</span>)</span>
+<span id="cb19-3"><a href="#cb19-3"></a></span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="fu">catalog</span>(<span class="at">X =</span> inq[<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, ], <span class="at">flim =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">50</span>), <span class="at">nrow =</span> <span class="dv">10</span>, <span class="at">ncol =</span> <span class="dv">10</span>,</span>
+<span id="cb19-5"><a href="#cb19-5"></a>    <span class="at">same.time.scale =</span> T, <span class="at">mar =</span> <span class="fl">0.01</span>, <span class="at">gr =</span> <span class="cn">FALSE</span>, <span class="at">img.suffix =</span> <span class="st">"inquiry"</span>,</span>
+<span id="cb19-6"><a href="#cb19-6"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"sound.files"</span>, <span class="st">"selec"</span>), <span class="at">legend =</span> <span class="dv">0</span>, <span class="at">rm.axes =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb19-7"><a href="#cb19-7"></a>    <span class="at">box =</span> F, <span class="at">group.tag =</span> <span class="st">"sound.files"</span>, <span class="at">tag.pal =</span> <span class="fu">list</span>(magma), <span class="at">width =</span> <span class="dv">20</span>,</span>
+<span id="cb19-8"><a href="#cb19-8"></a>    <span class="at">height =</span> <span class="dv">20</span>, <span class="at">pal =</span> viridis, <span class="at">collevels =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><img src="images/Catalog_p1-inquiry.jpeg" alt="viewSpec" width="680"></p>
@@ -1101,7 +1100,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">tailor_sels</span>(<span class="at">X =</span> lbh_selec_table[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, ], <span class="at">auto.next =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">tailor_sels</span>(<span class="at">X =</span> lbh_selec_table[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, ], <span class="at">auto.next =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><img src="images/seltailor.autonext.gif" alt="seltailor autonext" width="820"></p>
@@ -1111,10 +1110,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>cntours <span class="ot">&lt;-</span> <span class="fu">freq_ts</span>(<span class="at">X =</span> lbh_selec_table[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, ])</span>
-<span id="cb20-2"><a href="#cb20-2"></a></span>
-<span id="cb20-3"><a href="#cb20-3"></a>tail.cntours <span class="ot">&lt;-</span> <span class="fu">tailor_sels</span>(<span class="at">X =</span> lbh_selec_table[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, ], <span class="at">ts.df =</span> cntours,</span>
-<span id="cb20-4"><a href="#cb20-4"></a>    <span class="at">auto.contour =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>cntours <span class="ot">&lt;-</span> <span class="fu">freq_ts</span>(<span class="at">X =</span> lbh_selec_table[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, ])</span>
+<span id="cb21-2"><a href="#cb21-2"></a></span>
+<span id="cb21-3"><a href="#cb21-3"></a>tail.cntours <span class="ot">&lt;-</span> <span class="fu">tailor_sels</span>(<span class="at">X =</span> lbh_selec_table[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, ], <span class="at">ts.df =</span> cntours,</span>
+<span id="cb21-4"><a href="#cb21-4"></a>    <span class="at">auto.contour =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><img src="images/seltailor.contour.gif" alt="seltailor autonext" width="820"></p>

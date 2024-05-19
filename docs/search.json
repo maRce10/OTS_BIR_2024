@@ -242,7 +242,7 @@
     "href": "quality_checks.html#check-recordings",
     "title": "Quality checks for recordings and annotations",
     "section": "3 Check recordings",
-    "text": "3 Check recordings\ncheck_sound_files() should be the first function that should be used before running any warbleR analysis. The function simply checks if the sound files in ‘.wav’ format in the working directory can be read in R. For example, the following code checks all the files in the ‘examples’ folder, which should detect the ‘corrupted_file.wav’:\n\n\nCode\ncheck_sound_files()\n\n\nIf we remove that file from the folder, the function returns the following message:\n\n\nCode\ncheck_sound_files()"
+    "text": "3 Check recordings\ncheck_sound_files() should be the first function that should be used before running any warbleR analysis. The function simply checks if the sound files in ‘.wav’ format in the working directory can be read in R. For example, the following code checks all the files in the ‘examples’ folder, which should detect the ‘corrupted_file.wav’:\n\n\nCode\ncheck_sound_files()\n\n\nAll files can be read\n\n\nNot all sound files have the same sampling rate (potentially problematic, particularly for cross_correlation())"
   },
   {
     "objectID": "quality_checks.html#spectrograph-settings",
