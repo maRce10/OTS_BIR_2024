@@ -229,7 +229,7 @@ date: "`r Sys.Date()`"
 
  
 
-## Day 5 
+## Day 5 [(video)](https://youtu.be/ca7dHCmom6E)
 
 ---
 
